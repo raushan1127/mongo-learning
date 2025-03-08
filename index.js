@@ -66,7 +66,7 @@ app.post("/todos", auth ,function(req,res){
 })
 })
  
-
+//function to add authentication process
 function auth(req,res,next){
     const token = req.headers.token
     const decodedtoken = token.verify(token, JWT_SECRET)
